@@ -1,4 +1,3 @@
-// IMC DATA
 const data = [
   {
     min: 0,
@@ -37,7 +36,7 @@ const data = [
   },
 ];
 
-// Seleção de elementos
+
 const imcTable = document.querySelector("#imc-table");
 
 const heightInput = document.querySelector("#height");
@@ -53,7 +52,7 @@ const imcInfo = document.querySelector("#imc-info span");
 
 const backBtn = document.querySelector("#back-btn");
 
-// Funções
+
 function createTable(data) {
   data.forEach((item) => {
     const div = document.createElement("div");
@@ -97,10 +96,10 @@ function showOrHideResults() {
   resultContainer.classList.toggle("hide");
 }
 
-// Init
+
 createTable(data);
 
-// Eventos
+
 [heightInput, weightInput].forEach((el) => {
   el.addEventListener("input", (e) => {
     const updatedValue = validDigits(e.target.value);
